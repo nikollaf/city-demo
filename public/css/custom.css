@@ -1,0 +1,6 @@
+.states-list {
+	columns: 4;
+  -webkit-columns: 4;
+  -moz-columns: 4;
+  list-style: none;
+}

@@ -1,0 +1,55 @@
+<?php include 'header.php'; ?>
+
+<ul class="states-list">
+	<li><a href="states/index.php?state=AL">AL</a></li>
+	<li><a href="/states/AK">AK</a></li>
+	<li><a href="/states/AZ">AZ</a></li>
+	<li><a href="/states/AR">AR</a></li>
+	<li><a href="/states/CA">CA</a></li>
+	<li><a href="/states/CO">CO</a></li>
+	<li><a href="/states/CT">CT</a></li>
+	<li><a href="/states/DE">DE</a></li>
+	<li><a href="/states/FL">FL</a></li>
+	<li><a href="/states/GA">GA</a></li>
+	<li><a href="/states/HI">HI</a></li>
+	<li><a href="/states/ID">ID</a></li>
+	<li><a href="/states/IL">IL</a></li>
+	<li><a href="/states/IN">IN</a></li>
+	<li><a href="/states/IA">IA</a></li>
+	<li><a href="/states/KS">KS</a></li>
+	<li><a href="/states/KY">KY</a></li>
+	<li><a href="/states/LA">LA</a></li>
+	<li><a href="/states/ME">ME</a></li>
+	<li><a href="/states/MD">MD</a></li>
+	<li><a href="/states/MA">MA</a></li>
+	<li><a href="/states/MI">MI</a></li>
+	<li><a href="/states/MN">MN</a></li>
+	<li><a href="/states/MS">MS</a></li>
+	<li><a href="/states/MO">MO</a></li>
+	<li><a href="/states/MT">MT</a></li>
+	<li><a href="/states/NE">NE</a></li>
+	<li><a href="/states/NV">NV</a></li>
+	<li><a href="/states/NH">NH</a></li>
+	<li><a href="/states/NJ">NJ</a></li>
+	<li><a href="/states/NM">NM</a></li>
+	<li><a href="/states/NY">NY</a></li>
+	<li><a href="/states/NC">NC</a></li>
+	<li><a href="/states/ND">ND</a></li>
+	<li><a href="/states/OH">OH</a></li>
+	<li><a href="/states/OK">OK</a></li>
+	<li><a href="/states/OR">OR</a></li>
+	<li><a href="/states/PA">PA</a></li>
+	<li><a href="/states/RI">RI</a></li>
+	<li><a href="/states/SC">SC</a></li>
+	<li><a href="/states/SD">SD</a></li>
+	<li><a href="/states/TN">TN</a></li>
+	<li><a href="/states/TX">TX</a></li>
+	<li><a href="/states/UT">UT</a></li>
+	<li><a href="/states/VT">VT</a></li>
+	<li><a href="/states/VA">VA</a></li>
+	<li><a href="/states/WA">WA</a></li>
+	<li><a href="/states/WV">WV</a></li>
+	<li><a href="/states/WI">WI</a></li>
+	<li><a href="/states/WY">WY</a></li>
+</ul>
+<?php include 'footer.php'; ?>
