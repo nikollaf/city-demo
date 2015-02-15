@@ -7,3 +7,9 @@
 </head>
 <body>
 	<div class="container">
+        <h1>Franc Nikolla Spartz Demo</h1>
+        <ul class="nav nav-pills">
+            <li role="presentation"><a href="index.php">States</a></li>
+            <li role="presentation"><a href="user.php">Users</a></li>
+
+        </ul>

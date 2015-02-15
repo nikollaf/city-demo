@@ -1,55 +1,65 @@
 <?php include 'header.php'; ?>
 
-<ul class="states-list">
-	<li><a href="states/index.php?state=AL">AL</a></li>
-	<li><a href="/states/AK">AK</a></li>
-	<li><a href="/states/AZ">AZ</a></li>
-	<li><a href="/states/AR">AR</a></li>
-	<li><a href="/states/CA">CA</a></li>
-	<li><a href="/states/CO">CO</a></li>
-	<li><a href="/states/CT">CT</a></li>
-	<li><a href="/states/DE">DE</a></li>
-	<li><a href="/states/FL">FL</a></li>
-	<li><a href="/states/GA">GA</a></li>
-	<li><a href="/states/HI">HI</a></li>
-	<li><a href="/states/ID">ID</a></li>
-	<li><a href="/states/IL">IL</a></li>
-	<li><a href="/states/IN">IN</a></li>
-	<li><a href="/states/IA">IA</a></li>
-	<li><a href="/states/KS">KS</a></li>
-	<li><a href="/states/KY">KY</a></li>
-	<li><a href="/states/LA">LA</a></li>
-	<li><a href="/states/ME">ME</a></li>
-	<li><a href="/states/MD">MD</a></li>
-	<li><a href="/states/MA">MA</a></li>
-	<li><a href="/states/MI">MI</a></li>
-	<li><a href="/states/MN">MN</a></li>
-	<li><a href="/states/MS">MS</a></li>
-	<li><a href="/states/MO">MO</a></li>
-	<li><a href="/states/MT">MT</a></li>
-	<li><a href="/states/NE">NE</a></li>
-	<li><a href="/states/NV">NV</a></li>
-	<li><a href="/states/NH">NH</a></li>
-	<li><a href="/states/NJ">NJ</a></li>
-	<li><a href="/states/NM">NM</a></li>
-	<li><a href="/states/NY">NY</a></li>
-	<li><a href="/states/NC">NC</a></li>
-	<li><a href="/states/ND">ND</a></li>
-	<li><a href="/states/OH">OH</a></li>
-	<li><a href="/states/OK">OK</a></li>
-	<li><a href="/states/OR">OR</a></li>
-	<li><a href="/states/PA">PA</a></li>
-	<li><a href="/states/RI">RI</a></li>
-	<li><a href="/states/SC">SC</a></li>
-	<li><a href="/states/SD">SD</a></li>
-	<li><a href="/states/TN">TN</a></li>
-	<li><a href="/states/TX">TX</a></li>
-	<li><a href="/states/UT">UT</a></li>
-	<li><a href="/states/VT">VT</a></li>
-	<li><a href="/states/VA">VA</a></li>
-	<li><a href="/states/WA">WA</a></li>
-	<li><a href="/states/WV">WV</a></li>
-	<li><a href="/states/WI">WI</a></li>
-	<li><a href="/states/WY">WY</a></li>
+
+<h2 class="text-center">Search Cities by State</h2>
+<ul class="states-list" id="states">
+	<li><button class="btn" value="AL">AL</button></li>
+	<li><button class="btn" value="AK">AK</button></li>
+	<li><button class="btn" value="AZ">AZ</button></li>
+	<li><button class="btn" value="AR">AR</button></li>
+	<li><button class="btn" value="CA">CA</button></li>
+	<li><button class="btn" value="CO">CO</button></li>
+	<li><button class="btn" value="CT">CT</button></li>
+	<li><button class="btn" value="DE">DE</button></li>
+	<li><button class="btn" value="FL">FL</button></li>
+	<li><button class="btn" value="GA">GA</button></li>
+	<li><button class="btn" value="HI">HI</button></li>
+	<li><button class="btn" value="ID">ID</button></li>
+	<li><button class="btn" value="IL">IL</button></li>
+	<li><button class="btn" value="IN">IN</button></li>
+	<li><button class="btn" value="IA">IA</button></li>
+	<li><button class="btn" value="KS">KS</button></li>
+	<li><button class="btn" value="KY">KY</button></li>
+	<li><button class="btn" value="LA">LA</button></li>
+	<li><button class="btn" value="ME">ME</button></li>
+	<li><button class="btn" value="MD">MD</button></li>
+	<li><button class="btn" value="MA">MA</button></li>
+	<li><button class="btn" value="MI">MI</button></li>
+	<li><button class="btn" value="MN">MN</button></li>
+	<li><button class="btn" value="MS">MS</button></li>
+	<li><button class="btn" value="MO">MO</button></li>
+	<li><button class="btn" value="MT">MT</button></li>
+	<li><button class="btn" value="NE">NE</button></li>
+	<li><button class="btn" value="NV">NV</button></li>
+	<li><button class="btn" value="NH">NH</button></li>
+	<li><button class="btn" value="NJ">NJ</button></li>
+	<li><button class="btn" value="NM">NM</button></li>
+	<li><button class="btn" value="NY">NY</button></li>
+	<li><button class="btn" value="NC">NC</button></li>
+	<li><button class="btn" value="ND">ND</button></li>
+	<li><button class="btn" value="OH">OH</button></li>
+	<li><button class="btn" value="OK">OK</button></li>
+	<li><button class="btn" value="OR">OR</button></li>
+	<li><button class="btn" value="PA">PA</button></li>
+	<li><button class="btn" value="RI">RI</button></li>
+	<li><button class="btn" value="SC">SC</button></li>
+	<li><button class="btn" value="SD">SD</button></li>
+	<li><button class="btn" value="TN">TN</button></li>
+	<li><button class="btn" value="TX">TX</button></li>
+	<li><button class="btn" value="UT">UT</button></li>
+	<li><button class="btn" value="VT">VT</button></li>
+	<li><button class="btn" value="VA">VA</button></li>
+	<li><button class="btn" value="WA">WA</button></li>
+	<li><button class="btn" value="WV">WV</button></li>
+	<li><button class="btn" value="WI">WI</button></li>
+	<li><button class="btn" value="WY">WY</button></li>
 </ul>
+
+<div id="cities">
+    <h1>Cities for <span></span></h1>
+    <ul id="city-list" class="list-group">
+    </ul>
+</div>
+
+
 <?php include 'footer.php'; ?>
