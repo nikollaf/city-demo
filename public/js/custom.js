@@ -1,5 +1,9 @@
 
-var rootURL = window.location.protocol + '//' + window.location.host + "/city-demo/api/v1/";
+if (window.location.host  == 'localhost') {
+    var rootURL = window.location.protocol + '//' + window.location.host + "/city-demo/api/v1/";
+} else {
+    var rootURL = window.location.protocol + '//' + window.location.host + "/api/v1/";
+}
 
 console.log(rootURL);
 
