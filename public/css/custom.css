@@ -58,6 +58,10 @@ ul.simplePagerNav li.currentPage a {
     margin-top: 25px;
 }
 
+#visit-list {
+    margin-top: 30px;
+}
+
 .users {
     height: 600px;
     overflow-y: scroll;
