@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.10
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Feb 14, 2015 at 09:00 PM
--- Server version: 5.5.38
--- PHP Version: 5.6.2
+-- Host: 127.0.0.1
+-- Generation Time: Feb 16, 2015 at 06:41 PM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `city-demo`
@@ -20,20 +26,20 @@ SET time_zone = "+00:00";
 -- Table structure for table `cities`
 --
 
-CREATE TABLE `cities` (
+CREATE TABLE IF NOT EXISTS `cities` (
 `id` int(11) NOT NULL,
   `name` varchar(254) NOT NULL,
   `state` varchar(2) NOT NULL,
   `status` varchar(64) NOT NULL,
   `latitude` int(11) NOT NULL,
-  `longtitude` int(11) NOT NULL
+  `longitude` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=10308 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cities`
 --
 
-INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`) VALUES
+INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longitude`) VALUES
 (1, 'Akron', 'AL', 'verified', 33, -88),
 (2, 'Huntsville', 'AL', 'verified', 35, -87),
 (3, 'Addison', 'AL', 'verified', 34, -87),
@@ -1141,7 +1147,7 @@ INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`)
 (1107, 'Vallecito', 'CA', 'verified', 38, -120),
 (1108, 'Julian', 'CA', 'verified', 33, -117),
 (1109, 'Mira Loma', 'CA', 'verified', 34, -118);
-INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`) VALUES
+INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longitude`) VALUES
 (1110, 'Napa', 'CA', 'verified', 38, -122),
 (1111, 'Mcclellan', 'CA', 'verified', 39, -121),
 (1112, 'Kerman', 'CA', 'verified', 37, -120),
@@ -2219,7 +2225,7 @@ INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`)
 (2189, 'Kellogg', 'ID', 'verified', 48, -116),
 (2190, 'Kendrick', 'ID', 'verified', 47, -117),
 (2191, 'Kimberly', 'ID', 'verified', 43, -114);
-INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`) VALUES
+INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longitude`) VALUES
 (2192, 'Coeur D''alene', 'ID', 'verified', 48, -117),
 (2193, 'Harrison', 'ID', 'verified', 47, -117),
 (2194, 'Sandpoint', 'ID', 'verified', 48, -117),
@@ -3318,7 +3324,7 @@ INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`)
 (3289, 'Bussey', 'IA', 'verified', 41, -93),
 (3290, 'Underwood', 'IA', 'verified', 41, -96),
 (3291, 'La Porte City', 'IA', 'verified', 42, -92);
-INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`) VALUES
+INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longitude`) VALUES
 (3292, 'Elgin', 'IA', 'verified', 43, -92),
 (3293, 'Keosauqua', 'IA', 'verified', 41, -92),
 (3294, 'Van Meter', 'IA', 'verified', 42, -94),
@@ -4416,7 +4422,7 @@ INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`)
 (4386, 'Fiskdale', 'MA', 'verified', 42, -72),
 (4387, 'Tewksbury', 'MA', 'verified', 43, -71),
 (4388, 'Byfield', 'MA', 'verified', 43, -71);
-INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`) VALUES
+INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longitude`) VALUES
 (4389, 'Barnstable', 'MA', 'verified', 42, -70),
 (4390, 'Montague', 'MA', 'verified', 43, -73),
 (4391, 'Tyngsborough', 'MA', 'verified', 43, -71),
@@ -5511,7 +5517,7 @@ INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`)
 (5485, 'Rosendale', 'MO', 'verified', 40, -95),
 (5486, 'Kingdom City', 'MO', 'verified', 39, -92),
 (5487, 'Bonne Terre', 'MO', 'verified', 38, -91);
-INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`) VALUES
+INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longitude`) VALUES
 (5488, 'Jameson', 'MO', 'verified', 40, -94),
 (5489, 'Eagleville', 'MO', 'verified', 40, -94),
 (5490, 'North Kansas City', 'MO', 'verified', 39, -95),
@@ -6599,7 +6605,7 @@ INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`)
 (6572, 'Lackawanna', 'NY', 'verified', 43, -79),
 (6573, 'Lake George', 'NY', 'verified', 43, -74),
 (6574, 'Angola', 'NY', 'verified', 43, -79);
-INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`) VALUES
+INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longitude`) VALUES
 (6575, 'Yorktown Heights', 'NY', 'verified', 41, -74),
 (6576, 'Shrub Oak', 'NY', 'verified', 41, -74),
 (6577, 'Lancaster', 'NY', 'verified', 43, -79),
@@ -7687,7 +7693,7 @@ INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`)
 (7659, 'Crowder', 'OK', 'verified', 35, -96),
 (7660, 'Cushing', 'OK', 'verified', 36, -97),
 (7661, 'Dale', 'OK', 'verified', 35, -97);
-INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`) VALUES
+INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longitude`) VALUES
 (7662, 'Davenport', 'OK', 'verified', 36, -97),
 (7663, 'Davidson', 'OK', 'verified', 34, -99),
 (7664, 'Davis', 'OK', 'verified', 35, -97),
@@ -8777,7 +8783,7 @@ INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`)
 (8748, 'Whitwell', 'TN', 'verified', 35, -86),
 (8749, 'College Station', 'TX', 'verified', 31, -96),
 (8750, 'Beeville', 'TX', 'verified', 28, -98);
-INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`) VALUES
+INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longitude`) VALUES
 (8751, 'Vidor', 'TX', 'verified', 30, -94),
 (8752, 'Dallas', 'TX', 'verified', 33, -97),
 (8753, 'Abernathy', 'TX', 'verified', 34, -102),
@@ -9871,7 +9877,7 @@ INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`)
 (9841, 'Bluefield', 'WV', 'verified', 37, -81),
 (9842, 'Sutton', 'WV', 'verified', 39, -81),
 (9843, 'Bridgeport', 'WV', 'verified', 39, -80);
-INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`) VALUES
+INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longitude`) VALUES
 (9844, 'Wellsburg', 'WV', 'verified', 40, -81),
 (9845, 'Buffalo', 'WV', 'verified', 39, -82),
 (9846, 'Delbarton', 'WV', 'verified', 38, -82),
@@ -10335,6 +10341,59 @@ INSERT INTO `cities` (`id`, `name`, `state`, `status`, `latitude`, `longtitude`)
 (10306, 'Galeton', 'PA', 'verified', 42, -78),
 (10307, 'Londonderry', 'NH', 'verified', 43, -71);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+`id` int(11) NOT NULL,
+  `first_name` varchar(32) NOT NULL,
+  `last_name` varchar(32) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`) VALUES
+(1, 'You', '.'),
+(2, 'Andrew ', 'Anderson'),
+(3, 'Henry', 'Harrison'),
+(4, 'John', 'Smith'),
+(5, 'Jose', 'Gonzales'),
+(6, 'Andrew', 'Watson'),
+(7, 'Bill', 'Brown'),
+(8, 'Michael', 'Jackson'),
+(9, 'Eliscia', 'Smith'),
+(10, 'Chris ', 'Jones');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_visits`
+--
+
+CREATE TABLE IF NOT EXISTS `user_visits` (
+  `user_id_fk` int(11) NOT NULL,
+  `city_id_fk` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_visits`
+--
+
+INSERT INTO `user_visits` (`user_id_fk`, `city_id_fk`) VALUES
+(1, 156),
+(1, 2264),
+(1, 3624),
+(1, 3652),
+(1, 5989),
+(1, 9429),
+(1, 9475),
+(1, 9478);
+
 --
 -- Indexes for dumped tables
 --
@@ -10346,6 +10405,18 @@ ALTER TABLE `cities`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user_visits`
+--
+ALTER TABLE `user_visits`
+ ADD PRIMARY KEY (`user_id_fk`,`city_id_fk`), ADD KEY `city_id_fk` (`city_id_fk`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -10354,3 +10425,22 @@ ALTER TABLE `cities`
 --
 ALTER TABLE `cities`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10308;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `user_visits`
+--
+ALTER TABLE `user_visits`
+ADD CONSTRAINT `user_visits_ibfk_1` FOREIGN KEY (`user_id_fk`) REFERENCES `users` (`id`),
+ADD CONSTRAINT `user_visits_ibfk_2` FOREIGN KEY (`city_id_fk`) REFERENCES `cities` (`id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

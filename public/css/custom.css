@@ -18,6 +18,21 @@
     margin: 25px auto 10px auto;
 }
 
+#visitedcity {
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+#visitedcity span {
+    display: none;
+    float: right;
+}
+
+#visitedcity:hover span {
+    display: block;
+}
+
 .states-list li {
     padding: 5px 0;
     font-size: 18px;

@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-<h2>Cities near <span></span></h2>
+<h2 class="text-center">Nearby Cities<span></span></h2>
 
 <div id="near-city-page">
 	<ul id="near-cities" class="list-group"></ul>

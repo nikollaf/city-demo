@@ -1,13 +1,14 @@
 
-var rootURL = "http://localhost:8888/city-demo/api/v1/";
+var rootURL = window.location.protocol + '//' + window.location.host + "/city-demo/api/v1/";
 
-
+console.log(rootURL);
 
 function findCitiesByState(id) {
 
 	$.ajax({
 		type: 'GET',
 		url: rootURL + 'states/' + id,
+        contentType: 'application/json',
 		dataType: "json",
 		success: function(data){
             $(data).each(function(index, object) {
@@ -31,16 +32,17 @@ function findNearCities() {
 
     $.ajax({
         type: 'GET',
-        url: rootURL + 'state/' + id + '/cities',
+        url: rootURL + 'states/' + id + '/cities',
+        contentType: 'application/json',
         dataType: "json",
         success: function(data){
             $(data).each(function(index, object) {
                  $('#near-cities')
-                     .append('<a href="city.php?id=' + object.id + '" title="View cities within a 100 mile radius" class="list-group-item">' + object.name + '</a>');
+                     .append('<button title="Have you visited this city?" value="' + object.id + '" id="visitedcity" class="list-group-item">' + object.name + '<span class="label label-success">Visited</span></button>');
             })
 
             $('#near-cities').quickPagination({
-                pageSize: 30
+                pageSize: 20
             });
         },
         error: function(jqXHR, textStatus, errorThrown){
@@ -64,16 +66,15 @@ function findUserVisits(id) {
     $.ajax({
         type: 'GET',
         url: rootURL + 'users/' + id + '/visits',
+        contentType: 'application/json',
         dataType: "json",
         success: function(data){
             $(data).each(function(index, object) {
 
                 var count = index + 1;
                 $('#visit-list')
-                    .append('<li title="View cities within a 100 mile radius" class="list-group-item">' + '<strong>' + count + '</strong>. ' + object.name + '</li>');
+                    .append('<ol title="View cities within a 100 mile radius">' + '<strong>' + count + '</strong>. ' + object.name + '</ol>');
             })
-
-            console.log(data);
 
             $('#visit-list').quickPagination({
                 pageSize: 20
@@ -91,6 +92,7 @@ function getUsers(){
     $.ajax({
         type: 'GET',
         url: rootURL + 'users',
+        contentType: 'application/json',
         dataType: "json",
         success: function(data){
             $(data).each(function(index, object) {
@@ -100,6 +102,28 @@ function getUsers(){
         },
         error: function(jqXHR, textStatus, errorThrown){
             alert('There is an error with the servers. Please try again later');
+        }
+    });
+}
+
+// post user visits
+
+function postUserVisit(cityId){
+
+    // your user id, normally this will be a SESSION id
+    var id = 1;
+
+    var cityid = JSON.stringify(cityId);
+
+    $.ajax({
+        type: 'POST',
+        url: rootURL + 'users/' + id + '/visits',   
+        data: { cityid: cityid },
+        success: function(){
+            alert('Great! Your post has been submitted!');
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            alert('You have already visited this city!');
         }
     });
 }
@@ -130,15 +154,19 @@ $(document).ready(function() {
 
     
     $('#user-page').on('click', '#user-list li button',function() {
-        console.log('clicked');
+      
         // clear previous data
         $('#visit-list').html('');
 
         // call ajax function
         findUserVisits($(this).val());
 
-        // show state
-        //$('#cities h1 span').append($(this).val());
+    });
+
+    // allows user to click which city he has visited
+    $('#near-city-page').on('click', '#visitedcity', function(e) {
+        
+        postUserVisit($(this).val());
     });
     
 
